@@ -1,0 +1,24 @@
+Mot de passe config en console : enigme
+
+bon ports : 2,3,5,6,11,13,14,16,19,23
+mauvais ports : 1,4,7,8,9, 
+commande utilisé :
+	-Mot de passe console :
+		Switch (config) #line con 0
+		Switch (config-line) #password Mot de passe
+		Switch (config-line) #login
+		Switch (config-line) #exit
+	
+	-Création d'un Vlan :
+
+		Switch (config) #vlan Numéro du Vlan
+		Switch (config-vlan) #name Nom du Vlan
+		Switch (config-vlan) #exit
+
+	-Affectation d'un port à un vlan :
+
+		Switch (config) #interface Type d'interface Numéro d'interface (fastEthernet 0/1)
+		Switch (config-if) #switchport mode access
+		Switch (config-if) #switchport access vlan Numéro du Vlan
+		Switch (config-if) #exit
+	
