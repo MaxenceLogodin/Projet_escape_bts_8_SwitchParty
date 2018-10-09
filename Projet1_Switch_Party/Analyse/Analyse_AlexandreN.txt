@@ -1,0 +1,7 @@
+Analyse des solutions de configuration du Switch
+
+Faire deux vlan: 
+un Vlan n°100 pour les ports qui sont bon 
+
+un Vlan n°200 pour les ports qui ne sont pas bon 
+
