@@ -1,3 +1,5 @@
 09/10/2018
 
 Création d'un projet QT
+
+devellopement d'un interface pour l'enoncer de l'enigme
