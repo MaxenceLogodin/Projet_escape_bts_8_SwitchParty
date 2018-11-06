@@ -3,3 +3,8 @@
 Création d'un projet QT
 
 devellopement d'un interface pour l'enoncer de l'enigme
+
+06/11/2018
+
+debugage du dossier QT pour l'interface ( le projet etait corompu)
+devellopement de l'interface avec mise place de la structure voulu.
