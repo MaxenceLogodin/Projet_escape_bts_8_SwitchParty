@@ -1,0 +1,17 @@
+Injecter la conf via Tftp32 :
+
+sur le pc changer l'adresse ip du PC en 192.168.1.2 255.255.255.0
+
+sur le switch en mode console faire les commandes suivantes :
+
+conf t
+interface vlan 1
+ip address 192.168.1.1 255.255.255.0
+no shut
+exit
+
+
+copy tftp: running-config
+192.168.1.2
+config-final
+//appuyer sur entrer et laissez faire jusqu'a ce que le switch redonne la main 
