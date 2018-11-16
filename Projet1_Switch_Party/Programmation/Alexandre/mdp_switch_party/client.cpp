@@ -6,7 +6,7 @@
 #include "client.h"
 
 Client::Client()
-:   m_networkSession(0)
+    :   m_networkSession(0)
 {
     std::string input;
     std::cout << "Application Client" << std::endl;
@@ -28,9 +28,16 @@ Client::Client()
 
     // connexion au serveur sur le port 53000
     m_tcpSocket->connectToHost( QHostAddress("127.0.0.1").toString(),53000);
-    std::cout << "Veuillez entrer le mot 'GAGNE:' precede du resultat trouve :";
+    std::cout << "Quelle est la reponse a l'enigme ? ";
     std::cin >> input;
-    envoiTexte(input);
+    while(input != "7")
+    {
+        std::cout << "Perdu, la prochaine fois sera la bonne ! ";
+        std::cin >> input;
+    }
+
+        std::cout << "Bravo, vous avez resolu l'enigme ! ";
+        envoiTexte(input);
 }
 
 
