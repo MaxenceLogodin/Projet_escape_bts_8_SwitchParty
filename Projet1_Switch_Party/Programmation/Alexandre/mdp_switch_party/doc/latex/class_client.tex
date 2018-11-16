@@ -1,0 +1,52 @@
+\hypertarget{class_client}{}\section{Client Class Reference}
+\label{class_client}\index{Client@{Client}}
+
+
+Classe décrivant un client. Le client a pour rôle d\textquotesingle{}envoyer un message au serveur.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+Inheritance diagram for Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_client}
+\end{center}
+\end{figure}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_ae5983d9d73779ff3a90acb1b73cf69cf}\label{class_client_ae5983d9d73779ff3a90acb1b73cf69cf}} 
+void {\bfseries afficher\+Erreur} (Q\+Abstract\+Socket\+::\+Socket\+Error socket\+Error)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_ac55d565ea5da905ca3e3dea4da471a03}\label{class_client_ac55d565ea5da905ca3e3dea4da471a03}} 
+void \mbox{\hyperlink{class_client_ac55d565ea5da905ca3e3dea4da471a03}{envoi\+Texte}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d\textquotesingle{}envoyer un message au serveur une fois la connexion établie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_client_a7a4be02c7064314761fb11c2cf43c483}\label{class_client_a7a4be02c7064314761fb11c2cf43c483}} 
+Q\+Tcp\+Socket $\ast$ \mbox{\hyperlink{class_client_a7a4be02c7064314761fb11c2cf43c483}{m\+\_\+tcp\+Socket}}
+\begin{DoxyCompactList}\small\item\em Q\+Tcp\+Socket fournissant les paramètres nécessaires à l\textquotesingle{}établiseement d\textquotesingle{}une connexion avec le serveur sous forme d\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_client_af41d2cbd7c1a4c83c09599682ed358df}\label{class_client_af41d2cbd7c1a4c83c09599682ed358df}} 
+Q\+Network\+Session $\ast$ \mbox{\hyperlink{class_client_af41d2cbd7c1a4c83c09599682ed358df}{m\+\_\+network\+Session}}
+\begin{DoxyCompactList}\small\item\em Q\+Network\+Session permet de créer une session de communication avec le serveur sous forme d\textquotesingle{}objet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe décrivant un client. Le client a pour rôle d\textquotesingle{}envoyer un message au serveur. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Stanisiere 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+B\+T\+S/\+S\+N2/\+Angibaud/\+T\+P\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T/\mbox{\hyperlink{client_8h}{client.\+h}}\item 
+E\+:/\+B\+T\+S/\+S\+N2/\+Angibaud/\+T\+P\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T/client.\+cpp\end{DoxyCompactItemize}

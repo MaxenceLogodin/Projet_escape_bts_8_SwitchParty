@@ -1,0 +1,20 @@
+Gestion requêtes ping communication serveur
+
+A ajouter dans le .pro:
+
+Qt += network
+
+A ajouter dans le programme principal:
+
+#include <QtNetwork/QTcpSocket>
+#include <QPlainTextEdit>
+
+void MainWindow::on_pushButton_clicked()
+{
+QTcpSocket messenger;
+messenger.connectToHost("10.16.2.137", 53000);
+if(!messenger.waitForConnected(3000))
+{
+ui->plainTextEdit->appendPlainText(QString("%1").arg(messenger.error()));
+}
+}
