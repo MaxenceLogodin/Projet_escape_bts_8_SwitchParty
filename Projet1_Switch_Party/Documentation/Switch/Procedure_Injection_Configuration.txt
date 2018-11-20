@@ -14,6 +14,12 @@ ip address 192.168.1.1 255.255.255.0
 no shut
 exit
 
+interface fa0/24
+switchport mode access
+switchport access vlan 1
+exit
+
+brancher un cable réseau du pc vers le port 24 du switch
 
 copy tftp: running-config
 192.168.1.2
