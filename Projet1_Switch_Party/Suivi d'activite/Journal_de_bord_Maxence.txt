@@ -1,2 +1,3 @@
 06/11/18(2h30): Analise des programmes et des libraries du ruban et recherche sur internet.
-16/11/18(3h): Tentative de premier programme 
+16/11/18(3h): Tentative de premier programme
+20/11/18(3h): Recherche sur le branchage puis correction des erreurs de compilations
