@@ -53,13 +53,6 @@ void Phare::executerUneSeconde()
         else if( m_est_noir == 4){
             defile4();
             }
-/**        while ( n != "oui" ){
-            std::cin >> n;
-         if ( n == "oui" ){
-             defile5();
-         }
-        }
-        */
     }
 }
 /** --------------------------------------------------------------------------------------
@@ -136,7 +129,7 @@ void Phare::defile5()
 {
     std::cout << "image5" << std::endl;
 
-    m_est_noir = 4;
+    m_est_noir = 5;
 
     QPixmap pixmap = QPixmap( "images/texte2.png" );
     m_image->setPixmap( pixmap.scaled(m_image->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation) );

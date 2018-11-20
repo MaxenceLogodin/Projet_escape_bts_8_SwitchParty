@@ -45,6 +45,7 @@ class MainWindow : public QMainWindow
         void onDemarrerSimulationClick();
         void onArreterSimulationClick();
         void onFinTimer();
+        void bouton1();
 
 
     private:
@@ -68,6 +69,9 @@ class MainWindow : public QMainWindow
 
         /** \brief Un pointeur sur le bouton de la barre d'outil pour arréter la simulation.*/
         QPushButton *m_toolbar_bouton_arreter_simulation;
+
+        /** \brief Un pointeur sur le bouton "Let's go".*/
+
 };
 
 #endif // MAINWINDOW_H

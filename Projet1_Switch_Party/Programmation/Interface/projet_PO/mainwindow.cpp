@@ -39,6 +39,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // taille par défaut de la fenêtre non redimensionnable
     setFixedSize(QSize(1680,975));
+
+    // defini le bouton1
+    connect(ui->bouton1, SIGNAL(released()),this, SLOT(bouton1());
+
 }
 
 /** --------------------------------------------------------------------------------------
@@ -49,9 +53,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::bouton1(){
+
+}
 
 /** --------------------------------------------------------------------------------------
- \brief Création de la barre d'outils.
+
+
+\brief Création de la barre d'outils.
 */
 void MainWindow::creerToolbar()
 {
