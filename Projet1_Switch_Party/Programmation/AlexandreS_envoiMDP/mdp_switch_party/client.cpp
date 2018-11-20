@@ -27,17 +27,17 @@ Client::Client()
     m_tcpSocket->abort();
 
     // connexion au serveur sur le port 53000
-    m_tcpSocket->connectToHost( QHostAddress("127.0.0.1").toString(),53000);
+    m_tcpSocket->connectToHost( QHostAddress("10.16.3.214").toString(),53000);
     std::cout << "Quelle est la reponse a l'enigme ? ";
     std::cin >> input;
-    while(input != "7")
+    while(input != "8")
     {
         std::cout << "Perdu, la prochaine fois sera la bonne ! ";
         std::cin >> input;
     }
 
         std::cout << "Bravo, vous avez resolu l'enigme ! ";
-        envoiTexte(input);
+        envoiTexte("GAGNE:" + input);
 }
 
 
@@ -45,7 +45,7 @@ Client::Client()
 // Méthode envoyant un texte au client
 void Client::envoiTexte( const std::string& s )
 {
-    std::cout << "Envoi de : " << s << std::endl;
+    std::cout << "Envoi de la reponse au serveur..." << std::endl;
     QString texte = tr(s.c_str());
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
