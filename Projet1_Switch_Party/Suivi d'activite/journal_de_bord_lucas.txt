@@ -8,3 +8,13 @@ devellopement d'un interface pour l'enoncer de l'enigme
 
 debugage du dossier QT pour l'interface ( le projet etait corompu)
 devellopement de l'interface avec mise place de la structure voulu.
+
+16/11/2018
+
+avancement sur l'interface graphique qu'aura la personne qui doit resoudre l'énigme
+
+20/11/2018
+
+la partie "mise en scene" est fini.
+debut de la mise en relation entre l'utilisateur et la machine.
+
