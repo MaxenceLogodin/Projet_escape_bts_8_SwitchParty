@@ -1,6 +1,10 @@
-Injecter la conf via Tftp32 :
+Cette documentation à pour but de détailler l'injection de la configuration dajns le switch pour l'énigme.
+Elle utilise le logiciel tftpd32 qui est disponible dans le dossier ressource\logiciel
+
+Injecter la conf via Tftpd32 :
 
 sur le pc changer l'adresse ip du PC en 192.168.1.2 255.255.255.0
+et ensuite lancer le logiciel tftpd32 disponible dans le repertoire ressource\logiciel
 
 sur le switch en mode console faire les commandes suivantes :
 
