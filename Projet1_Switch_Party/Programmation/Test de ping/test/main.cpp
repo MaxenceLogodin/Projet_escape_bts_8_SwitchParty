@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     }
 
-        printf(" \n \n les resultats sont bons le code est 7 \n \n");
+        printf(" \n \n Felicitation vous avez bien tout reconnecte \n Pour vous recompenser de vos effort voici le code a envoyer : 7 \n \n");
 
 
 
