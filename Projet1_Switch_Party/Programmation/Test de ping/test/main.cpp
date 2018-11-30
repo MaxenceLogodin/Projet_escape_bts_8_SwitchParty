@@ -20,8 +20,7 @@ int main(int argc, char *argv[])
 
     }
 
-        printf(" \n \n les resultats sont bons \n \n");
-
+        printf(" \n \n les resultats sont bons le code est 7 \n \n");
 
 
 
