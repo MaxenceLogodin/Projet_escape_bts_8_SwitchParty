@@ -1,0 +1,3 @@
+﻿1>------ Début de la génération : Projet : Test_Afficheur_Goulven, Configuration : Debug Any CPU ------
+1>  Test_Afficheur_Goulven -> C:\Users\maxence.logodin\Desktop\Test_Afficheur_Goulven\Test_Afficheur_Goulven\bin\Debug\Test_Afficheur_Goulven.exe
+========== Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré ==========
