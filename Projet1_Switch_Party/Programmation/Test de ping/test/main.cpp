@@ -13,14 +13,14 @@ int main(int argc, char *argv[])
         result = system("ping 10.16.2.81");
         if(result == 1)
         {
-            printf(" \n \n les branchements ne sont pas bons \n \n");
+            printf(" \n \n LES BRANCHEMENTS NE SONT PAS BONS. PEUT-ETRE DEVRIEZ-VOUS REVOIR LA CONFIGURATION DES BRANCHEMENTS ? \n \n");
             sleep(5);
 
         }
 
     }
 
-        printf(" \n \n Felicitation vous avez bien tout reconnecte \n Pour vous recompenser de vos effort voici le code a envoyer : 7 \n \n");
+        printf(" \n \n TOUT REFONCTIONNE ! MERCI POUR TON AIDE, JE VAIS ENFIN POUVOIR CONTINUER MON TRAVAIL D'ASSISTANT SOCIAL POUR ORDINATEUR.\n\n POUR TE RECOMPENSER TOI ET TES AMIS (SI TU EN AS) DE TES EFFORTS, VOICI LE CHIFFRE CLE A ENVOYER POUR ACCEDER A DE FABULEUX TRESORS : 8 \n \n");
 
 
 

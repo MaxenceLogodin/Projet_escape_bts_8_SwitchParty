@@ -16,6 +16,8 @@
 */
 int main(int argc, char *argv[])
 {
+
+
     QFile File("stylesheet.qss");
     File.open(QFile::ReadOnly);
     QString StyleSheet = QLatin1String(File.readAll());
@@ -25,6 +27,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
 
     return a.exec();
 }
