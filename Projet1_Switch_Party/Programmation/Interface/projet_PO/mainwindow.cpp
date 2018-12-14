@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setFixedSize(QSize(1680,975));
 
     // defini le bouton1
-    connect(ui->bouton1, SIGNAL(released()),this, SLOT(bouton1());
+    //connect(ui->bouton1, SIGNAL(released()),this, SLOT(bouton1());
 
 }
 
@@ -69,26 +69,11 @@ void MainWindow::creerToolbar()
     m_toolbar_bouton_charger_phare= new QPushButton();
     ui->mainToolBar->addWidget(m_toolbar_bouton_charger_phare);
 
-    m_toolbar_bouton_demarrer_simulation= new QPushButton();
-    ui->mainToolBar->addWidget(m_toolbar_bouton_demarrer_simulation);
-
-    m_toolbar_bouton_arreter_simulation= new QPushButton();
-    ui->mainToolBar->addWidget(m_toolbar_bouton_arreter_simulation);
 
     m_toolbar_bouton_charger_phare->setIcon(style->standardIcon( QStyle::SP_DialogOpenButton ));
     m_toolbar_bouton_charger_phare->setText("Commencer l'énigme");
     connect( m_toolbar_bouton_charger_phare, SIGNAL(released()), this, SLOT(onOuvrirPhareClick()));
 
-    m_toolbar_bouton_demarrer_simulation->setIcon(style->standardIcon( QStyle::SP_MediaPlay ));
-    m_toolbar_bouton_demarrer_simulation->setText("Si l'écran devient noir, cliquer ici");
-    connect( m_toolbar_bouton_demarrer_simulation, SIGNAL(released()), this, SLOT(onDemarrerSimulationClick()));
-
-    m_toolbar_bouton_arreter_simulation->setIcon(style->standardIcon( QStyle::SP_MediaStop ));
-    m_toolbar_bouton_arreter_simulation->setText("Arréter");
-    connect( m_toolbar_bouton_arreter_simulation, SIGNAL(released()), this, SLOT(onArreterSimulationClick()));
-
-    m_toolbar_bouton_demarrer_simulation->setEnabled(false);
-    m_toolbar_bouton_arreter_simulation->setEnabled(false);
 }
 
 /** --------------------------------------------------------------------------------------
@@ -97,8 +82,6 @@ void MainWindow::creerToolbar()
 void MainWindow::onOuvrirPhareClick()
 {
     ouvrirPhare();
-    m_toolbar_bouton_demarrer_simulation->setEnabled(true);
-    m_toolbar_bouton_arreter_simulation->setEnabled(false);
 }
 
 /** --------------------------------------------------------------------------------------
@@ -108,9 +91,7 @@ void MainWindow::onDemarrerSimulationClick()
 {
     m_phare->demarrer();
     m_timer->start(1000);
-    m_toolbar_bouton_charger_phare->setEnabled(false);
-    m_toolbar_bouton_demarrer_simulation->setEnabled(false);
-    m_toolbar_bouton_arreter_simulation->setEnabled(true);
+   // m_toolbar_bouton_charger_phare->setEnabled(false);
 }
 
 /** --------------------------------------------------------------------------------------
@@ -120,8 +101,6 @@ void MainWindow::onArreterSimulationClick()
 {
     m_timer->stop();
 
-    m_toolbar_bouton_demarrer_simulation->setEnabled(true);
-    m_toolbar_bouton_arreter_simulation->setEnabled(false);
     m_toolbar_bouton_charger_phare->setEnabled(true);
 }
 
@@ -140,14 +119,7 @@ void MainWindow::onFinTimer()
 */
 void MainWindow::ouvrirPhare()
 {
-    QString nom_fichier =
-            QFileDialog::getOpenFileName( this, tr("Ouvrir l'énigme"),
-                                          "Switch_Party", tr("TOUTvaBIEN (*.pha);;"));
-
-    if (nom_fichier.isEmpty())
-        return;
-
-    QFile file(nom_fichier);
+    QFile file("Switch_Party/TOUTvaBIEN.pha");
 
     if (! file.open(QIODevice::ReadOnly))
     {
@@ -186,6 +158,7 @@ void MainWindow::ouvrirPhare()
                 if ( conversion_ok )
                     creerPhare( temps_allume, temps_eteint, temps_image2, temps_image3);
 
+                onDemarrerSimulationClick();
             }
         }
     }

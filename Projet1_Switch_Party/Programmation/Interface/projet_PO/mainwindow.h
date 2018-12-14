@@ -64,12 +64,6 @@ class MainWindow : public QMainWindow
         /** \brief Un pointeur sur le bouton de la barre d'outil pour charger un phare.*/
         QPushButton *m_toolbar_bouton_charger_phare;
 
-        /** \brief Un pointeur sur le  bouton de la barre d'outil pour démarrer la simulation.*/
-        QPushButton *m_toolbar_bouton_demarrer_simulation;
-
-        /** \brief Un pointeur sur le bouton de la barre d'outil pour arréter la simulation.*/
-        QPushButton *m_toolbar_bouton_arreter_simulation;
-
         /** \brief Un pointeur sur le bouton "Let's go".*/
 
 };
