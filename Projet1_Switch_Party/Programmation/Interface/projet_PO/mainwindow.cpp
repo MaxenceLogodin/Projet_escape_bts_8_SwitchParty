@@ -40,9 +40,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // taille par défaut de la fenêtre non redimensionnable
     setFixedSize(QSize(1680,975));
 
-    // defini le bouton1
-    //connect(ui->bouton1, SIGNAL(released()),this, SLOT(bouton1());
-
 }
 
 /** --------------------------------------------------------------------------------------
@@ -51,10 +48,6 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::bouton1(){
-
 }
 
 /** --------------------------------------------------------------------------------------
@@ -119,7 +112,7 @@ void MainWindow::onFinTimer()
 */
 void MainWindow::ouvrirPhare()
 {
-    QFile file("Switch_Party/TOUTvaBIEN.pha");
+    QFile file("C:/Users/lucas.minaud/Documents/GitHub/Projet_escape_bts_8_SwitchParty/Projet1_Switch_Party/Programmation/Interface/projet_PO/Switch_Party/TOUTvaBIEN.pha");
 
     if (! file.open(QIODevice::ReadOnly))
     {
@@ -138,7 +131,7 @@ void MainWindow::ouvrirPhare()
             QString commande = list.at(0);
             list.removeFirst();
 
-            if ( commande == "PHARE" && list.size() == 4
+            if ( commande == "PHARE" && list.size() == 5
                  )
             {
                 // on controle si les temps sont bien des entiers
@@ -147,16 +140,17 @@ void MainWindow::ouvrirPhare()
                 int temps_eteint;
                 int temps_image2;
                 int temps_image3;
-
+                int temps_image4;
 
                 if ( conversion_ok )
                     temps_eteint = list.at(1).toInt(& conversion_ok);
                     temps_image2 = list.at(2).toInt(& conversion_ok);
                     temps_image3 = list.at(3).toInt(& conversion_ok);
+                    temps_image4 = list.at(4).toInt(& conversion_ok);
 
 
                 if ( conversion_ok )
-                    creerPhare( temps_allume, temps_eteint, temps_image2, temps_image3);
+                    creerPhare( temps_allume, temps_eteint, temps_image2, temps_image3, temps_image4);
 
                 onDemarrerSimulationClick();
             }
@@ -169,12 +163,12 @@ void MainWindow::ouvrirPhare()
     \param temps_allume La durée durant laquelle le phare reste allumé, en secondes.
     \param temps_eteint La durée durant laquelle le phare reste eteint, en secondes.
 */
-void MainWindow::creerPhare( int temps_allume, int temps_eteint, int temps_image2, int temps_image3)
+void MainWindow::creerPhare( int temps_allume, int temps_eteint, int temps_image2, int temps_image3, int temps_image4)
 {
     // On détruit l'ancien phare s'il existe
     if ( m_phare != NULL )
         delete m_phare;
 
     // création du phare
-    m_phare = new Phare( m_image_phare, temps_allume, temps_eteint, temps_image2, temps_image3);
+    m_phare = new Phare( m_image_phare, temps_allume, temps_eteint, temps_image2, temps_image3, temps_image4);
 }

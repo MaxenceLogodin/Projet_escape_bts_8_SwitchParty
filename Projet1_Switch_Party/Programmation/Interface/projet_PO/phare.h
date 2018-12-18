@@ -16,7 +16,7 @@
 class Phare
 {
     public:
-        Phare(QLabel *image, int duree_allume, int duree_eteint, int duree_image2, int duree_image3);
+        Phare(QLabel *image, int duree_allume, int duree_eteint, int duree_image2, int duree_image3, int duree_image4);
 
         void executerUneSeconde();
         void demarrer();
@@ -27,7 +27,6 @@ class Phare
         void defile2();
         void defile3();
         void defile4();
-        void defile5();
 
     private:
         /** \brief Pointeur sur l'image représentant le phare.*/
