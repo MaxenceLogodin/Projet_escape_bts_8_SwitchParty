@@ -14,15 +14,15 @@
     \param duree_allume La durée durant laquelle le phare reste allumé, en secondes.
     \param duree_eteint La durée durant laquelle le phare reste eteint, en secondes.
 */
-Phare::Phare(QLabel *image, int duree_allume, int duree_eteint, int duree_image2, int duree_image3)
+Phare::Phare(QLabel *image, int duree_allume, int duree_eteint, int duree_image2, int duree_image3, int duree_image4)
 {
-    std::cout << "Creation d'un phare ( allume " << duree_allume << "s et eteint " << duree_eteint << "s)" << duree_image2 << std::endl;
     m_image = image;
 
     m_duree_allume = duree_allume;
     m_duree_1 = duree_eteint;
     m_duree_2 = duree_image2;
     m_duree_3 = duree_image3;
+    m_duree_4 = duree_image4;
 
     demarrer();
 }
@@ -68,7 +68,6 @@ void Phare::demarrer()
 */
 void Phare::allumer()
 {
-    std::cout << "Allumer" << std::endl;
 
     m_temps_restant = m_duree_allume;
     m_est_noir = true;
@@ -118,20 +117,10 @@ void Phare::defile3()
 void Phare::defile4()
 {
     std::cout << "image4" << std::endl;
-
+    m_temps_restant = m_duree_4;
     m_est_noir = 4;
 
     QPixmap pixmap = QPixmap( "images/texte6.png" );
-    m_image->setPixmap( pixmap.scaled(m_image->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation) );
-    m_image->show();
-}
-void Phare::defile5()
-{
-    std::cout << "image5" << std::endl;
-
-    m_est_noir = 5;
-
-    QPixmap pixmap = QPixmap( "images/texte2.png" );
     m_image->setPixmap( pixmap.scaled(m_image->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation) );
     m_image->show();
 }

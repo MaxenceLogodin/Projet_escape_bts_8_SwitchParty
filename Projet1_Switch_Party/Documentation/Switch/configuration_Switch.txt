@@ -2,7 +2,7 @@ Document d'aperçu
 
 bon ports : 2,3,5,6,11,13,14,16,19,23
 mauvais ports : 1,4,7,8,9,10,12,15,17,18,20,21,22,24
-
+Total câbles RJ-45: 6
 
 
 ports vlan 200: 1,4,12,15,20,21

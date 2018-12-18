@@ -38,14 +38,13 @@ class MainWindow : public QMainWindow
     private:
         void creerToolbar();
         void ouvrirPhare();
-        void creerPhare( int temps_allume, int temps_eteint, int temps_image2, int temps_image3);
+        void creerPhare( int temps_allume, int temps_eteint, int temps_image2, int temps_image3, int temps_image4);
 
     private slots:
         void onOuvrirPhareClick();
         void onDemarrerSimulationClick();
         void onArreterSimulationClick();
         void onFinTimer();
-        void bouton1();
 
 
     private:
@@ -63,8 +62,6 @@ class MainWindow : public QMainWindow
 
         /** \brief Un pointeur sur le bouton de la barre d'outil pour charger un phare.*/
         QPushButton *m_toolbar_bouton_charger_phare;
-
-        /** \brief Un pointeur sur le bouton "Let's go".*/
 
 };
 
