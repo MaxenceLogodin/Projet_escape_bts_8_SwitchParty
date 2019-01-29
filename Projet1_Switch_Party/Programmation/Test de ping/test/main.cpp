@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     int result = 1;
 
     while (result == 1) {
-        result = system("ping 10.16.2.81");
+        result = system("ping 192.168.1.1");
         if(result == 1)
         {
             printf(" \n \n LES BRANCHEMENTS NE SONT PAS BONS. PEUT-ETRE DEVRIEZ-VOUS REVOIR LA CONFIGURATION DES BRANCHEMENTS ? \n \n");
